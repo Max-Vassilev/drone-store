@@ -1,0 +1,113 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    padding: 25px 0;
+    background: #374151;
+    text-align: center;
+    color: #f9fafb;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    width: 100%;
+    justify-items: center;
+}
+
+.trip-card {
+    background: #f3f4f6;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.trip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.trip-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.trip-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.trip-content h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #111827;
+}
+
+.trip-content p {
+    margin: 0;
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.trip-details {
+    font-size: 0.9rem;
+    color: #374151;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.trip-button {
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: white;
+    font-weight: 600;
+    cursor: default;
+    transition: background 0.3s, transform 0.2s;
+    align-self: flex-start;
+}
+
+.trip-button:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+}
+
+footer {
+    width: 100%;
+    padding: 20px 0;
+    background: #374151;
+    text-align: center;
+    color: #f9fafb;
+    margin-top: auto;
+}
