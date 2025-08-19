@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destinations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Explore Destinations</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="trip-card">
+            <img src="https://www.royalcaribbean.com/media-assets/pmc/content/dam/shore-x/paris-le-havre-leh/lh17-paris-sightseeing-without-lunch/stock-photo-skyline-of-paris-with-eiffel-tower-at-sunset-in-paris-france-eiffel-tower-is-one-of-the-most-752725282.jpg?w=1920" alt="Paris">
+            <div class="trip-content">
+                <h3>Paris</h3>
+                <p class="trip-details">€450 | 4 days</p>
+                <p>Visit the iconic Eiffel Tower, stroll along the Seine, and enjoy the art and culture of the City of Lights.</p>
+                <button class="trip-button">View Trip</button>
+            </div>
+        </div>
+
+        <div class="trip-card">
+            <img src="https://www.italyperfect.com/cdn-cgi/image/format=auto,width=1256/https://www.italyperfect.com/g/photos/upload/sml_845543004-1590582528-ip-info-rome.jpg" alt="Rome">
+            <div class="trip-content">
+                <h3>Rome</h3>
+                <p class="trip-details">€350 | 3 days</p>
+                <p>Discover the Colosseum, Vatican City, and ancient Roman history while savoring Italian cuisine.</p>
+                <button class="trip-button">View Trip</button>
+            </div>
+        </div>
+
+        <div class="trip-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Museumsinsel_Berlin_Juli_2021_1_%28cropped%29_b.jpg/2880px-Museumsinsel_Berlin_Juli_2021_1_%28cropped%29_b.jpg" alt="Berlin">
+            <div class="trip-content">
+                <h3>Berlin</h3>
+                <p class="trip-details">€400 | 4 days</p>
+                <p>Explore Berlin's rich history, vibrant nightlife, and world-famous landmarks such as the Brandenburg Gate.</p>
+                <button class="trip-button">View Trip</button>
+            </div>
+        </div>
+
+        <div class="trip-card">
+            <img src="https://images.contentstack.io/v3/assets/blt06f605a34f1194ff/bltdb42d0af0dddb0dd/65006732539fa162b64ae755/0_-_BCC-2023-MADRID-LANDMARKS-0.webp?format=webp&auto=avif&quality=60&crop=16%3A9&width=1440" alt="Madrid">
+            <div class="trip-content">
+                <h3>Madrid</h3>
+                <p class="trip-details">€380 | 3 days</p>
+                <p>Experience Madrid's royal palaces, bustling plazas, and vibrant nightlife while enjoying delicious Spanish cuisine.</p>
+                <button class="trip-button">View Trip</button>
+            </div>
+        </div>
+
+        <div class="trip-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Monastiraki_Square_and_Acropolis_in_Athens_%2844149181684%29.jpg/960px-Monastiraki_Square_and_Acropolis_in_Athens_%2844149181684%29.jpg" alt="Athens">
+            <div class="trip-content">
+                <h3>Athens</h3>
+                <p class="trip-details">€220 | 3 days</p>
+                <p>Explore the Acropolis, stroll through Plaka, and immerse yourself in the rich history and vibrant culture of Greece's capital.</p>
+                <button class="trip-button">View Trip</button>
+            </div>
+        </div>
+
+        <div class="trip-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Lisbon_%2836831596786%29_%28cropped%29.jpg/960px-Lisbon_%2836831596786%29_%28cropped%29.jpg" alt="Lisbon">
+            <div class="trip-content">
+                <h3>Lisbon</h3>
+                <p class="trip-details">€320 | 3 days</p>
+                <p>Explore the historic Alfama district, savor traditional Portuguese cuisine, and enjoy panoramic views from the city's many miradouros.</p>
+                <button class="trip-button">View Trip</button>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2025 Travel Destinations. All rights reserved.
+        <div>
+            <a href="contacts.html" style="color: #60a5fa; text-decoration: none;">Contact Us</a>
+        </div>
+    </footer>
+
+</body>
+</html>
