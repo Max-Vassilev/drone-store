@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Destinations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Explore Destinations</h1>
+  </header>
+
+  <div class="container" id="trips"></div>
+
+  <footer>
+    &copy; 2025 Travel Destinations. All rights reserved.
+    <div>
+      <a href="contacts.html" style="color: #60a5fa; text-decoration: none;">Contact Us</a>
+    </div>
+  </footer>
+
+  <script>
+    async function loadTrips() {
+      const res = await fetch("http://localhost:8080/destinations")
+      const trips = await res.json()
+      const container = document.getElementById("trips")
+      container.innerHTML = ""
+
+      trips.forEach(trip => {
+        const card = document.createElement("div")
+        card.className = "trip-card"
+        card.innerHTML = `
+          <img src="${trip.image}" alt="${trip.name}">
+          <div class="trip-content">
+            <h3>${trip.name}</h3>
+            <p class="trip-details">${trip.price} | ${trip.days} days</p>
+            <p>${trip.description}</p>
+            <button class="trip-button">View Trip</button>
+          </div>
+        `
+        container.appendChild(card)
+      })
+    }
+
+    loadTrips()
+  </script>
+</body>
+</html>
