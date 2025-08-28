@@ -1,12 +1,21 @@
-# travel-agency
+# Travel Agency
 
-Frontend: React (Vite)
-Backend: Flask
-Database: PostgreSQL
-Deployment: AWS
+**Frontend:** React (Vite)  
+**Backend:** Flask  
+**Database:** PostgreSQL (RDS)  
+**Deployment:** AWS
 
-Currently, the website is deployed using an S3 bucket, EC2 instance, and RDS database.
-The next step involves integrating an ASG, ALB, and CloudFront for the S3 bucket.
+## Current Deployment
+The website is currently deployed using:  
+- **S3 bucket** for static assets  
+- **EC2 instance** for the backend  
+- **RDS database** for PostgreSQL
+
+## Next Steps
+Planned enhancements include integrating:  
+- **Auto Scaling Group (ASG)**  
+- **Application Load Balancer (ALB)**  
+- **CloudFront** for the S3 bucket
 
 <img width="2970" height="600" alt="image" src="https://github.com/user-attachments/assets/e82e8cda-475b-4e85-a9a3-643637534ec6" />
 
