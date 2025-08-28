@@ -19,6 +19,8 @@ Planned enhancements include integrating:
 - **Application Load Balancer (ALB)**  
 - **CloudFront** for the S3 bucket
 
-<img width="2970" height="600" alt="image" src="https://github.com/user-attachments/assets/e82e8cda-475b-4e85-a9a3-643637534ec6" />
+<img width="700" height="900" alt="image" src="https://github.com/user-attachments/assets/aacf96d9-9928-4658-8a58-f8450a508cb8" />
 
-<img width="2970" height="600" alt="image" src="https://github.com/user-attachments/assets/285423cb-28f5-4e33-b204-fbdb55e2d616" />
+<img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/e82e8cda-475b-4e85-a9a3-643637534ec6" />
+
+<img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/285423cb-28f5-4e33-b204-fbdb55e2d616" />
