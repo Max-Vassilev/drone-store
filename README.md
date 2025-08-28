@@ -18,6 +18,8 @@ Planned enhancements include integrating:
 - **Auto Scaling Group (ASG)**  
 - **Application Load Balancer (ALB)**  
 - **CloudFront** for the S3 bucket
+- **SSL/TLS Certificate** for secure connections  
+- **Custom Domain** configuration using Route 53
   
 <img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/e82e8cda-475b-4e85-a9a3-643637534ec6" />
 
