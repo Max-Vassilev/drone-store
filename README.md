@@ -9,7 +9,7 @@
 The website is currently deployed using:  
 - **S3 bucket** for static assets  
 - **EC2 instance** for the backend  
-- **RDS database** for PostgreSQL
+- **RDS** for PostgreSQL database
 
 ## Next Steps
 Planned enhancements include integrating:  
