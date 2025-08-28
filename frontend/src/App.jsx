@@ -6,7 +6,7 @@ export default function App() {
 
   useEffect(() => {
     async function loadTrips() {
-      const res = await fetch("http://54.226.236.90:8080/destinations")
+      const res = await fetch("http://localhost:8080/destinations")
       const data = await res.json()
       setTrips(data)
     }
