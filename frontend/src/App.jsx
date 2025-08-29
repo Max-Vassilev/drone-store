@@ -6,7 +6,7 @@ export default function App() {
 
   useEffect(() => {
     async function loadTrips() {
-      const res = await fetch("http://localhost:8080/destinations")
+      const res = await fetch(`${import.meta.env.VITE_FLASK_URL}/destinations`)
       const data = await res.json()
       setTrips(data)
     }
