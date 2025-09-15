@@ -4,7 +4,7 @@
 
 **Frontend:** React (Vite)  
 **Backend:** Flask  
-**Database:** PostgreSQL (RDS) (!)
+**Database:** PostgreSQL (RDS) (!) 
 **Deployment:** AWS
 
 
