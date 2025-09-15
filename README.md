@@ -5,8 +5,8 @@
 **Frontend:** React (Vite)  
 **Backend:** Flask  
 **Database:** PostgreSQL (RDS) (!)
-
 **Deployment:** AWS
+
 
 ## Current Deployment
 The website is currently deployed using:  
