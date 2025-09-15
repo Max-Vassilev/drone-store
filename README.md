@@ -4,14 +4,14 @@
 
 **Frontend:** React (Vite)  
 **Backend:** Flask  
-**Database:** PostgreSQL (RDS)  
+**Database:** PostgreSQL (RDS) (!)
 **Deployment:** AWS
 
 ## Current Deployment
 The website is currently deployed using:  
 - **S3 bucket** for static assets  
 - **EC2 instance** for the backend  
-- **RDS** for PostgreSQL database
+- **RDS** for PostgreSQL database (!)
 
 ## Next Steps
 Planned enhancements include integrating:  
