@@ -24,3 +24,7 @@ Planned enhancements include integrating:
 <img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/e82e8cda-475b-4e85-a9a3-643637534ec6" />
 
 <img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/285423cb-28f5-4e33-b204-fbdb55e2d616" />
+
+cd backend
+docker build -t travel-backend .
+docker run -d -p 8080:8080 travel-backend
