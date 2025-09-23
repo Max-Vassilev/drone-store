@@ -6,7 +6,7 @@ export default function App() {
 
   useEffect(() => {
     async function loadTrips() {
-    const res = await fetch("http://54.89.185.135:8080/destinations") # Hardcoded IPV4 of the EC2
+    const res = await fetch("http://54.89.185.135:8080/destinations") // Hardcoded IPV4 of the EC2
       const data = await res.json()
       setTrips(data)
     }
