@@ -4,7 +4,7 @@ export default function About() {
   const [about, setAbout] = useState(null)
 
   useEffect(() => {
-    fetch("http://localhost:8080/about")
+    fetch("http://54.89.185.135:8080/about")
       .then(res => res.json())
       .then(data => setAbout(data))
   }, [])
