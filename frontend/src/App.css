@@ -41,8 +41,10 @@ nav {
   transform: translateY(-2px);
 }
 
-.nav-link i {
-  font-size: 1.1rem;
+.nav-link:focus,
+.nav-link:active {
+  color: #f9fafb;
+  outline: none;
 }
 
 #root {
