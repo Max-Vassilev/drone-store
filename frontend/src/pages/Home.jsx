@@ -6,7 +6,7 @@ export default function Home() {
 
   useEffect(() => {
     async function loadTrips() {
-      const res = await fetch("http://localhost:8080/destinations")
+      const res = await fetch("http://54.89.185.135:8080/destinations") // Hardcoded EC2 IP Address
       const data = await res.json()
       setTrips(data)
     }

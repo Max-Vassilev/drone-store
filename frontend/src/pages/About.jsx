@@ -6,7 +6,7 @@ export default function About() {
 
   useEffect(() => {
     async function loadAbout() {
-      const res = await fetch("http://localhost:8080/about")
+      const res = await fetch("http://54.89.185.135:8080/about") // Hardcoded EC2 IP Address
       const data = await res.json()
       setAbout(data)
     }
