@@ -1,46 +1,34 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom"
+import Home from "./pages/Home"
+import About from "./pages/About"
 import "./App.css"
 
 export default function App() {
-  const [trips, setTrips] = useState([])
-
-  useEffect(() => {
-    async function loadTrips() {
-    const res = await fetch("http://54.89.185.135:8080/destinations") // Hardcoded IPV4 of the EC2
-      const data = await res.json()
-      setTrips(data)
-    }
-    loadTrips()
-  }, [])
-
   return (
-    <>
+    <Router>
       <header>
-        <h1>Explore Destinations</h1>
+        <nav>
+          <NavLink to="/" className="nav-link">
+            <i className="fas fa-house"></i> Home
+          </NavLink>
+          <NavLink to="/about" className="nav-link">
+            <i className="fas fa-info-circle"></i> About
+          </NavLink>
+        </nav>
       </header>
 
-      <div className="container">
-        {trips.map(trip => (
-          <div key={trip.name} className="trip-card">
-            <img src={trip.image} alt={trip.name} />
-            <div className="trip-content">
-              <h3>{trip.name}</h3>
-              <p className="trip-details">{trip.price} | {trip.days} days</p>
-              <p>{trip.description}</p>
-              <button className="trip-button">View Trip</button>
-            </div>
-          </div>
-        ))}
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
 
       <footer>
         &copy; 2025 Travel Destinations. All rights reserved.
         <div>
-          <a href="contacts.html" style={{ color: "#60a5fa", textDecoration: "none" }}>
-            Contact Us
-          </a>
+          <a href="contacts.html">Contact Us</a>
         </div>
       </footer>
-    </>
+    </Router>
   )
 }

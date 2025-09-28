@@ -16,5 +16,19 @@ def get_destinations():
     ]
     return jsonify(destinations)
 
+@app.route("/about", methods=["GET"])
+def about_page():
+    about_info = {
+        "title": "About This Project",
+        "description": (
+            "This is an example website built with a Flask backend and a React (Vite.js) frontend. "
+            "Currently, it does not use a database, but PostgreSQL will be added in the future. "
+            "The project is designed as a small DevOps practice to work with AWS services such as S3, EC2, and RDS "
+            "(for the future database). Later, it may also be containerized and deployed with ECR and ECS Fargate."
+        )
+    }
+    return jsonify(about_info)
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080, debug=True)
