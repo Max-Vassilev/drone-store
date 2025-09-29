@@ -22,9 +22,9 @@ Planned enhancements include integrating:
 - **SSL/TLS Certificate** for secure connections  
 - **Custom Domain** configuration using Route 53
   
-<img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/e82e8cda-475b-4e85-a9a3-643637534ec6" />
+<img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/a40469d8-521b-41ca-b92b-f83be4e7bc3e" />
 
-<img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/285423cb-28f5-4e33-b204-fbdb55e2d616" />
+<img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/edd699a1-352c-4a63-b8ad-b5450dd581b2" />
 
 cd backend
 docker build -t travel-backend .
