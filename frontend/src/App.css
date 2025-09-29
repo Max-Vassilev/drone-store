@@ -15,9 +15,21 @@ header {
   background: #374151;
   color: #f9fafb;
   display: flex;
-  justify-content: flex-end;
-  padding: 20px 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
   box-sizing: border-box;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  margin-right: 20px;
 }
 
 nav {
@@ -174,5 +186,9 @@ footer {
   .about-container {
     padding: 1rem;
     margin: 5% 0.5rem;
+  }
+
+  .logo {
+    height: 40px;
   }
 }

@@ -3,12 +3,16 @@ import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-do
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Contacts from "./pages/Contacts"
+import Logo from "./assets/Logo.png"
 import "./App.css"
 
 export default function App() {
   return (
     <Router>
       <header>
+        <div className="logo-container">
+          <img src={Logo} alt="Logo" className="logo" />
+        </div>
         <nav>
           <NavLink to="/" className="nav-link">
             <i className="fas fa-house"></i> Home
