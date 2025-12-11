@@ -1,0 +1,5 @@
+# Ignore backend virtual environment
+backend/venv/
+
+# Ignore frontend JSON files
+.json

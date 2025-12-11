@@ -5,7 +5,7 @@ export default function Home() {
   const [trips, setTrips] = useState(null)
 
   useEffect(() => {
-    fetch("http://54.89.185.135:8080/destinations") // Hardcoded EC2 IP Address
+    fetch("http://127.0.0.1:8080/destinations")
       .then(res => res.json())
       .then(data => setTrips(data))
   }, [])
