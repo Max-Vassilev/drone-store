@@ -11,17 +11,17 @@ export default function App() {
     <Router>
       <header>
         <div className="logo-container">
-          <img src={Logo} alt="Logo" className="logo" />
+          <img src={Logo} alt="Drone Store Logo" className="logo" />
         </div>
         <nav>
           <NavLink to="/" className="nav-link">
-            <i className="fas fa-house"></i> Home
+            <i className="fas fa-drone"></i> Home
           </NavLink>
           <NavLink to="/about" className="nav-link">
-            <i className="fas fa-info-circle"></i> About
+            <i className="fas fa-info-circle"></i> About Us
           </NavLink>
           <NavLink to="/contacts" className="nav-link">
-            <i className="fas fa-address-book"></i> Contacts
+            <i className="fas fa-headset"></i> Contacts
           </NavLink>
         </nav>
       </header>
@@ -33,7 +33,7 @@ export default function App() {
       </Routes>
 
       <footer>
-        &copy; 2025 Travel Destinations. All rights reserved.
+        &copy; 2025 Drone Store. All rights reserved.
       </footer>
     </Router>
   )

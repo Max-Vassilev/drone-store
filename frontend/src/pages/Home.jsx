@@ -1,22 +1,33 @@
 import React, { useEffect, useState } from "react"
-import TripCard from "../components/TripCard"
+import ProductCard from "../components/ProductCard"
 
 export default function Home() {
-  const [trips, setTrips] = useState(null)
+  const [products, setProducts] = useState(null)
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8080/destinations")
+    fetch("http://127.0.0.1:8080/products")
       .then(res => res.json())
-      .then(data => setTrips(data))
+      .then(data => setProducts(data))
   }, [])
 
-  if (!trips) return <div className="loading-text">Loading...</div>
-
   return (
-    <div className="container">
-      {trips.map(trip => (
-        <TripCard key={trip.name} trip={trip} />
-      ))}
-    </div>
+    <>
+      <section className="hero">
+        <div className="hero-overlay">
+          <h1>Discover the World from Above</h1>
+          <p>Premium drones for creators, explorers, and professionals</p>
+        </div>
+      </section>
+
+      {!products && <div className="loading-text">Loading...</div>}
+
+      {products && (
+        <div className="container">
+          {products.map(product => (
+            <ProductCard key={product.name} product={product} />
+          ))}
+        </div>
+      )}
+    </>
   )
 }

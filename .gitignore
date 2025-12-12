@@ -1,5 +1,9 @@
-# Ignore backend virtual environment
+# Backend
 backend/venv/
 
-# Ignore frontend JSON files
+# Frontend
 .json
+
+
+# Others
+.DS_Store

@@ -4,17 +4,47 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/destinations", methods=["GET"])
-def get_destinations():
-    destinations = [
-        {"name": "Paris","price": "€450","days": "4","description": "Visit the iconic Eiffel Tower, stroll along the Seine, and enjoy the art and culture of the City of Lights.","image": "https://www.royalcaribbean.com/media-assets/pmc/content/dam/shore-x/paris-le-havre-leh/lh17-paris-sightseeing-without-lunch/stock-photo-skyline-of-paris-with-eiffel-tower-at-sunset-in-paris-france-eiffel-tower-is-one-of-the-most-752725282.jpg?w=1920"},
-        {"name": "Rome","price": "€350","days": "3","description": "Discover the Colosseum, Vatican City, and ancient Roman history while savoring Italian cuisine.","image": "https://www.italyperfect.com/cdn-cgi/image/format=auto,width=1256/https://www.italyperfect.com/g/photos/upload/sml_845543004-1590582528-ip-info-rome.jpg"},
-        {"name": "Berlin","price": "€400","days": "4","description": "Explore Berlin's rich history, vibrant nightlife, and world-famous landmarks such as the Brandenburg Gate.","image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Museumsinsel_Berlin_Juli_2021_1_%28cropped%29_b.jpg/2880px-Museumsinsel_Berlin_Juli_2021_1_%28cropped%29_b.jpg"},
-        {"name": "Madrid","price": "€380","days": "3","description": "Experience Madrid's royal palaces, bustling plazas, and vibrant nightlife while enjoying delicious Spanish cuisine.","image": "https://images.contentstack.io/v3/assets/blt06f605a34f1194ff/bltdb42d0af0dddb0dd/65006732539fa162b64ae755/0_-_BCC-2023-MADRID-LANDMARKS-0.webp?format=webp&auto=avif&quality=60&crop=16%3A9&width=1440"},
-        {"name": "Athens","price": "€220","days": "3","description": "Explore the Acropolis, stroll through Plaka, and immerse yourself in the rich history and vibrant culture of Greece's capital.","image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Monastiraki_Square_and_Acropolis_in_Athens_%2844149181684%29.jpg/960px-Monastiraki_Square_and_Acropolis_in_Athens_%2844149181684%29.jpg"},
-        {"name": "Lisbon","price": "€320","days": "3","description": "Explore the historic Alfama district, savor traditional Portuguese cuisine, and enjoy panoramic views from the city's many miradouros.","image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Lisbon_%2836831596786%29_%28cropped%29.jpg/960px-Lisbon_%2836831596786%29_%28cropped%29.jpg"}
+@app.route("/products", methods=["GET"])
+def get_drones():
+    drones = [
+        {
+            "name": "DJI Mini 2 SE",
+            "price": "€349",
+            "description": "Lightweight drone with 2.7K video, 31-minute flight time, easy controls.",
+            "image": "https://s13emagst.akamaized.net/products/53306/53305567/images/res_f0df34e50fd345b71c537306d360eec4.jpg"
+        },
+        {
+            "name": "DJI Air 3",
+            "price": "€1099",
+            "description": "Dual-camera drone with 4K video and omnidirectional obstacle sensing.",
+            "image": "https://store.dji.bg/img/p/8/1/0/2/8102-large_default.jpg"
+        },
+        {
+            "name": "DJI Mavic 3 Classic",
+            "price": "€1499",
+            "description": "Hasselblad camera drone with 5.1K video for professional creators.",
+            "image": "https://s13emagst.akamaized.net/products/50112/50111907/images/res_50f3bef294d609d6fc4143d39a6beb58.jpg"
+        },
+        {
+            "name": "Autel EVO Lite+",
+            "price": "€1299",
+            "description": "6K video drone with adjustable aperture and strong low-light performance.",
+            "image": "https://aerocam.bg/image/cache/catalog/AUTEL/Autel-LITE/autel-lite-plus-dron-nalichen-bulgaria-aerocam-900x900.jpg"
+        },
+        {
+            "name": "Parrot Anafi",
+            "price": "€599",
+            "description": "4K HDR drone with 180-degree tilt gimbal and ultra-portable design.",
+            "image": "https://www.parrot.com/assets/s3fs-public/styles/lg/public/2022-03/anafi-usa.jpg"
+        },
+        {
+            "name": "Skydio 2+",
+            "price": "€1,099",
+            "description": "Autonomous tracking drone with industry-leading obstacle avoidance.",
+            "image": "https://mfe-is.com/wp-content/uploads/2024/09/Skydio-2-Hero.png"
+        }
     ]
-    return jsonify(destinations)
+    return jsonify(drones)
 
 @app.route("/about", methods=["GET"])
 def about_page():
