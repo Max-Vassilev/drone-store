@@ -4,8 +4,7 @@
 
 **Frontend:** React (Vite)  
 **Backend:** Flask  
-**Database:** PostgreSQL (RDS) - not ready
-
+**Database:** PostgreSQL (RDS)
 
 <img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/f5fa77c0-ff32-4c08-bd3c-c7aca9197efb" />
 
