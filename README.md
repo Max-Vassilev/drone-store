@@ -6,7 +6,7 @@
 **Backend:** Flask  
 **Database:** PostgreSQL (RDS) - not ready
 
-<img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/b1d892e1-517b-4c06-ac23-b7fd551f6a47" />
 
-<img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/09ff69c9-3e11-41e5-90c5-9d0f92166684" />
+<img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/f5fa77c0-ff32-4c08-bd3c-c7aca9197efb" />
 
+<img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/2524b4ba-c3ad-4681-a6fb-0cf9586a0761" />
