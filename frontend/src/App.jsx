@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-do
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Contacts from "./pages/Contacts"
+import Product from "./pages/Product"
 import Logo from "./assets/Logo.png"
 import "./App.css"
 
@@ -14,15 +15,10 @@ export default function App() {
           <img src={Logo} alt="Drone Store Logo" className="logo" />
         </div>
         <nav>
-          <NavLink to="/" className="nav-link">
-            <i className="fas fa-home"></i> Home
-          </NavLink>
-          <NavLink to="/about" className="nav-link">
-            <i className="fas fa-info-circle"></i> About
-          </NavLink>
-          <NavLink to="/contacts" className="nav-link">
-            <i className="fas fa-headset"></i> Contacts
-          </NavLink>
+          <NavLink to="/about" className="nav-link">About</NavLink>
+          <NavLink to="/contacts" className="nav-link">Contacts</NavLink>
+          <NavLink to="/" className="nav-link">Home</NavLink>
+          <NavLink to="/cart" className="nav-link"><i className="fas fa-shopping-cart"></i></NavLink>
         </nav>
       </header>
 
@@ -30,6 +26,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/products/:id" element={<Product />} />
       </Routes>
 
       <footer>

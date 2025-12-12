@@ -24,7 +24,7 @@ export default function Home() {
       {products && (
         <div className="container">
           {products.map(product => (
-            <ProductCard key={product.name} product={product} />
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       )}
