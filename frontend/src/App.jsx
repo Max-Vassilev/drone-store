@@ -15,10 +15,10 @@ export default function App() {
         </div>
         <nav>
           <NavLink to="/" className="nav-link">
-            <i className="fas fa-drone"></i> Home
+            <i className="fas fa-home"></i> Home
           </NavLink>
           <NavLink to="/about" className="nav-link">
-            <i className="fas fa-info-circle"></i> About Us
+            <i className="fas fa-info-circle"></i> About
           </NavLink>
           <NavLink to="/contacts" className="nav-link">
             <i className="fas fa-headset"></i> Contacts
