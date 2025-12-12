@@ -13,7 +13,7 @@ export default function Contacts() {
 
   return (
     <div className="about-container">
-      <h2>Contact Me</h2>
+      <h2>Contact Us</h2>
       <p><strong>Name:</strong> {contact.name}</p>
       <p><strong>Title:</strong> {contact.title}</p>
       <p><strong>Location:</strong> {contact.location}</p>
