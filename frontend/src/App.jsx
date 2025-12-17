@@ -18,12 +18,17 @@ export default function App() {
         <div className="logo-container">
           <img src={Logo} alt="Drone Store Logo" className="logo" />
         </div>
+
         <nav>
           <NavLink to="/about" className="nav-link">About</NavLink>
           <NavLink to="/contacts" className="nav-link">Contacts</NavLink>
           <NavLink to="/" className="nav-link">Home</NavLink>
-          <NavLink to="/cart" className="nav-link">
-            <i className="fas fa-shopping-cart"></i> ({totalItems})
+
+          <NavLink to="/cart" className="nav-link cart-link">
+            <i className="fas fa-shopping-cart"></i>
+            {totalItems > 0 && (
+              <span className="cart-badge">{totalItems}</span>
+            )}
           </NavLink>
         </nav>
       </header>
