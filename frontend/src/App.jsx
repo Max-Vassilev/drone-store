@@ -4,10 +4,14 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Contacts from "./pages/Contacts"
 import Product from "./pages/Product"
+import Cart from "./pages/Cart"
 import Logo from "./assets/Logo.png"
+import { useCart } from "./context/CartContext"
 import "./App.css"
 
 export default function App() {
+  const { totalItems } = useCart()
+
   return (
     <Router>
       <header>
@@ -18,7 +22,9 @@ export default function App() {
           <NavLink to="/about" className="nav-link">About</NavLink>
           <NavLink to="/contacts" className="nav-link">Contacts</NavLink>
           <NavLink to="/" className="nav-link">Home</NavLink>
-          <NavLink to="/cart" className="nav-link"><i className="fas fa-shopping-cart"></i></NavLink>
+          <NavLink to="/cart" className="nav-link">
+            <i className="fas fa-shopping-cart"></i> ({totalItems})
+          </NavLink>
         </nav>
       </header>
 
@@ -27,6 +33,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/products/:id" element={<Product />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
 
       <footer>

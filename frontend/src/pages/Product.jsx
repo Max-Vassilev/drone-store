@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { useCart } from "../context/CartContext"
 
 export default function Product() {
   const { id } = useParams()
+  const { addToCart } = useCart()
   const [product, setProduct] = useState(null)
 
   useEffect(() => {
@@ -26,7 +28,12 @@ export default function Product() {
         <p>{product.full_description}</p>
         <div className="product-buy-row">
           <p className="product-price">{product.price}</p>
-          <button className="product-button">Add to cart</button>
+          <button
+            className="product-button"
+            onClick={() => addToCart(product)}
+          >
+            Add to cart
+          </button>
         </div>
       </div>
     </div>

@@ -330,3 +330,28 @@ footer {
     padding: 40px;
   }
 }
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.product-button-secondary {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.product-button-secondary:hover {
+  background: #e5e7eb;
+  border-color: #94a3b8;
+  transform: translateY(-2px);
+}
+
