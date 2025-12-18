@@ -1,8 +1,10 @@
 import React from "react"
 import { useCart } from "../context/CartContext"
+import { useNavigate } from "react-router-dom"
 
 export default function Cart() {
   const { cart, increase, decrease } = useCart()
+  const navigate = useNavigate()
 
   const total = cart.reduce((sum, item) => {
     const price = Number(item.price.replace(/[^0-9.]/g, ""))
@@ -53,26 +55,15 @@ export default function Cart() {
             <img
               src={item.image}
               alt={item.name}
-              style={{
-                width: "80px",
-                height: "80px",
-                objectFit: "contain"
-              }}
+              style={{ width: "80px", height: "80px", objectFit: "contain" }}
             />
 
-            <div style={{ paddingRight: "20px" }}>
-              {item.name}
-            </div>
-
-            <div>
-              {item.price}
-            </div>
+            <div>{item.name}</div>
+            <div>{item.price}</div>
 
             <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
               <button className="product-button" onClick={() => decrease(item.id)}>-</button>
-              <span style={{ minWidth: "24px", textAlign: "center" }}>
-                {item.quantity}
-              </span>
+              <span>{item.quantity}</span>
               <button className="product-button" onClick={() => increase(item.id)}>+</button>
             </div>
           </div>
@@ -88,39 +79,22 @@ export default function Cart() {
           boxShadow: "0 8px 24px rgba(0,0,0,0.08)"
         }}
       >
-        <h3 style={{ marginBottom: "20px" }}>Order Summary</h3>
+        <h3>Order Summary</h3>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginBottom: "12px"
-          }}
-        >
+        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
           <span>Items</span>
           <span>{cart.reduce((s, i) => s + i.quantity, 0)}</span>
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            fontWeight: "600",
-            fontSize: "18px",
-            marginBottom: "24px"
-          }}
-        >
+        <div style={{ display: "flex", justifyContent: "space-between", fontWeight: "600", fontSize: "18px", marginBottom: "24px" }}>
           <span>Total</span>
           <span>€{total.toLocaleString()}</span>
         </div>
 
         <button
           className="product-button"
-          style={{
-            width: "100%",
-            padding: "14px",
-            fontSize: "16px"
-          }}
+          style={{ width: "100%", padding: "14px", fontSize: "16px" }}
+          onClick={() => navigate("/checkout")}
         >
           Proceed to Checkout
         </button>

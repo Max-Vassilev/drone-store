@@ -1,7 +1,7 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 from flask_migrate import Migrate
-from models import db, Product
+from models import db, Product, CustomerOrder, CustomerOrderItem
 
 app = Flask(__name__)
 CORS(app)
@@ -54,5 +54,34 @@ def contacts_page():
         "location": "Sofia, Bulgaria"
     })
 
+@app.route("/orders", methods=["POST"])
+def create_order():
+    print("Hello 1")
+    data = request.get_json()
+
+    if not data:
+        return jsonify({"error": "Invalid JSON"}), 400
+
+    order = CustomerOrder(
+        first_name=data["first_name"],
+        last_name=data["last_name"],
+        phone=data["phone"],
+        courier=data["courier"],
+        address=data["address"]
+    )
+
+    db.session.add(order)
+    db.session.flush()
+
+    for item in data["items"]:
+        db.session.add(CustomerOrderItem(
+            order_id=order.id,
+            product_id=item["product_id"],
+            quantity=item["quantity"]
+        ))
+
+    db.session.commit()
+    return jsonify({"order_id": order.id}), 201
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080, debug=True)
+    app.run(host="0.0.0.0", port=8080, debug=False, use_reloader=False)

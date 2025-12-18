@@ -5,6 +5,7 @@ import About from "./pages/About"
 import Contacts from "./pages/Contacts"
 import Product from "./pages/Product"
 import Cart from "./pages/Cart"
+import Checkout from "./pages/Checkout"
 import Logo from "./assets/Logo.png"
 import { useCart } from "./context/CartContext"
 import "./App.css"
@@ -26,9 +27,7 @@ export default function App() {
 
           <NavLink to="/cart" className="nav-link cart-link">
             <i className="fas fa-shopping-cart"></i>
-            {totalItems > 0 && (
-              <span className="cart-badge">{totalItems}</span>
-            )}
+            {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
           </NavLink>
         </nav>
       </header>
@@ -39,6 +38,7 @@ export default function App() {
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/products/:id" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
 
       <footer>

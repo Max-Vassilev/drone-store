@@ -13,3 +13,27 @@
 <img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/d418945a-cd85-43c4-b124-195c8c389e48" />
 
 <img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/4ea2c140-111d-4e6d-85e2-572cf1e85b17" />
+
+
+***Useful commands for development***
+
+Connect to the DB:
+```bash
+psql -h localhost -p 5432 -U drones_user drones_db
+```
+
+```bash
+\dt
+```
+
+```bash
+SELECT * FROM products;
+```
+
+```bash
+SELECT * FROM customer_orders;
+```
+
+```bash
+SELECT * FROM customer_order_items;
+```
