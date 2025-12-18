@@ -14,10 +14,10 @@
 
 <img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/4ea2c140-111d-4e6d-85e2-572cf1e85b17" />
 
+<img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/0edfe8b9-a33d-4a06-aeb0-bd2d8fb71fa2" />
 
 ***Useful commands for development***
 
-Connect to the DB:
 ```bash
 psql -h localhost -p 5432 -U drones_user drones_db
 ```
