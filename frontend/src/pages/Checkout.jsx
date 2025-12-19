@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useCart } from "../context/CartContext"
+import toast from "react-hot-toast"
 
 export default function Checkout() {
   const { cart } = useCart()
@@ -21,7 +22,17 @@ export default function Checkout() {
       !form.address ||
       cart.length === 0
     ) {
-      alert("Please fill all fields")
+      toast.error("Please fill all fields", {
+        duration: 10000,
+        position: "bottom-right",
+        style: {
+          minWidth: "420px",
+          fontSize: "20px",
+          padding: "20px",
+          borderRadius: "14px",
+          marginBottom: "40px"
+        }
+      })
       return
     }
 
@@ -40,13 +51,34 @@ export default function Checkout() {
         body: JSON.stringify(payload)
       })
 
-      if (!res.ok) throw new Error("Request failed")
+      if (!res.ok) throw new Error()
 
       localStorage.removeItem("cart")
-      alert("Order placed")
-      window.location.href = "/"
-    } catch (e) {
-      alert("Order failed")
+      toast.success("Order placed successfully", {
+        duration: 10000,
+        position: "bottom-right",
+        style: {
+          minWidth: "420px",
+          fontSize: "20px",
+          padding: "20px",
+          borderRadius: "14px",
+          fontWeight: "500",
+          marginBottom: "40px"
+        }
+      })
+      setTimeout(() => (window.location.href = "/"), 10000)
+    } catch {
+      toast.error("Order failed", {
+        duration: 10000,
+        position: "bottom-right",
+        style: {
+          minWidth: "420px",
+          fontSize: "20px",
+          padding: "20px",
+          borderRadius: "14px",
+          marginBottom: "40px"
+        }
+      })
     }
   }
 
