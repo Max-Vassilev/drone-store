@@ -14,7 +14,7 @@
 
 <img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/5a2f0b3a-563f-4531-8441-58dcfb744e0f" />
 
-<img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/1ea55e2a-8da3-4d9c-a6c8-c62f8d37b1da" />
+<img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/fbc9071e-ea03-4010-b206-f16245a84e12" />
 
 ***Useful commands for development***
 
